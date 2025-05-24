@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +9,22 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            background-color: #f8fafc; /* Gris claro */
         }
-
+        /* Estilos personalizados para el gradiente del botón */
         .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Índigo a Púrpura */
             transition: all 0.3s ease;
         }
-
         .btn-gradient:hover {
-            background-image: linear-gradient(to right, #4f46e5, #7c3aed);
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Índigo más oscuro a Púrpura más oscuro */
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
         }
-
         .section-heading {
             position: relative;
             display: inline-block;
         }
-
         .section-heading::after {
             content: '';
             position: absolute;
@@ -37,24 +33,23 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background-color: #6366f1;
+            background-color: #6366f1; /* Índigo */
             border-radius: 9999px;
         }
-
+        /* Estilos para el modal */
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Posición fija en la pantalla */
+            z-index: 1000; /* Por encima de todo */
             left: 0;
             top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Alto completo */
+            overflow: auto; /* Habilitar scroll si es necesario */
+            background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
             justify-content: center;
             align-items: center;
         }
-
         .modal-content {
             background-color: #fefefe;
             margin: auto;
@@ -62,10 +57,9 @@
             border-radius: 12px;
             width: 90%;
             max-width: 600px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             position: relative;
         }
-
         .close-button {
             color: #aaa;
             float: right;
@@ -76,7 +70,6 @@
             right: 20px;
             cursor: pointer;
         }
-
         .close-button:hover,
         .close-button:focus {
             color: #000;
@@ -85,33 +78,22 @@
         }
     </style>
 </head>
-
 <body class="text-gray-800">
 
     <header class="bg-white shadow-sm py-4 px-6 md:px-12 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-indigo-600 rounded-md p-2 hover:bg-indigo-50 transition-colors">
-                AutomatizIA
+                AutomatizaIA
             </a>
             <nav class="hidden md:flex space-x-6">
-                <a href="#servicios"
-                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Servicios</a>
-                <a href="#beneficios"
-                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Beneficios</a>
-                <a href="#como-funciona"
-                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Cómo
-                    Funciona</a>
-                <a href="#testimonios"
-                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Testimonios</a>
-                <a href="#contacto"
-                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Contacto</a>
+                <a href="#servicios" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Servicios</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Beneficios</a>
+                <a href="#como-funciona" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Cómo Funciona</a>
+                <a href="#testimonios" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Testimonios</a>
+                <a href="#contacto" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Contacto</a>
             </nav>
             <button class="md:hidden text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
     </header>
@@ -122,11 +104,9 @@
                 Transforma tu Negocio con Automatización Inteligente
             </h1>
             <p class="text-lg md:text-xl mb-10 opacity-90 animate-fade-in">
-                Libera el potencial de tu empresa.
-                Automatizamos tus procesos clave con IA para que te enfoques en lo que realmente importa.
+                Libera el potencial de tu empresa. Automatizamos tus procesos clave con IA para que te enfoques en lo que realmente importa.
             </p>
-            <a href="#contacto"
-                class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <a href="#contacto" class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 ¡Solicita una Consulta Gratuita!
             </a>
         </div>
@@ -134,89 +114,49 @@
 
     <section id="servicios" class="py-16 px-6 md:px-12 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Nuestros Servicios de
-                Automatización</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Nuestros Servicios de Automatización</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                            </path>
-                        </svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Automatización de Procesos Robóticos (RPA)</h3>
-                    <p class="text-gray-600 text-center">Implementamos bots de software para manejar tareas repetitivas y
-                        basadas en reglas, mejorando la eficiencia operativa.</p>
+                    <p class="text-gray-600 text-center">Implementamos bots de software para manejar tareas repetitivas y basadas en reglas, mejorando la eficiencia operativa.</p>
                 </div>
-                <div
-                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M7 8h10M7 12h10M7 16h10M12 20h9a2 2 0 002-2V5a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2h9z">
-                            </path>
-                        </svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h10M7 16h10M12 20h9a2 2 0 002-2V5a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2h9z"></path></svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Asistentes Virtuales y Chatbots</h3>
-                    <p class="text-gray-600 text-center">Desarrollamos asistentes de IA para mejorar la atención al
-                        cliente, soporte y gestión de consultas 24/7.</p>
+                    <p class="text-gray-600 text-center">Desarrollamos asistentes de IA para mejorar la atención al cliente, soporte y gestión de consultas 24/7.</p>
                 </div>
-                <div
-                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Análisis de Datos y Reportes Inteligentes</h3>
-                    <p class="text-gray-600 text-center">Transformamos datos brutos en información valiosa con IA,
-                        automatizando la generación de reportes y la toma de decisiones.</p>
+                    <p class="text-gray-600 text-center">Transformamos datos brutos en información valiosa con IA, automatizando la generación de reportes y la toma de decisiones.</p>
                 </div>
-                <div
-                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V3a1 1 0 00-1-1H4a1 1 0 00-1 1v18a1 1 0 001 1h16a1 1 0 001-1V9a1 1 0 00-1-1h-4z">
-                            </path>
-                        </svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V3a1 1 0 00-1-1H4a1 1 0 00-1 1v18a1 1 0 001 1h16a1 1 0 001-1V9a1 1 0 00-1-1h-4z"></path></svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Gestión Documental Inteligente</h3>
-                    <p class="text-gray-600 text-center">Automatizamos la clasificación, extracción y procesamiento de
-                        información de documentos con IA.</p>
+                    <p class="text-gray-600 text-center">Automatizamos la clasificación, extracción y procesamiento de información de documentos con IA.</p>
                 </div>
-                <div
-                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
-                            </path>
-                        </svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Automatización de Marketing y Ventas</h3>
-                    <p class="text-gray-600 text-center">Optimiza tus campañas, personaliza interacciones y califica leads
-                        automáticamente con soluciones de IA.</p>
+                    <p class="text-gray-600 text-center">Optimiza tus campañas, personaliza interacciones y califica leads automáticamente con soluciones de IA.</p>
                 </div>
-                <div
-                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Integración y Consultoría de IA</h3>
-                    <p class="text-gray-600 text-center">Te asesoramos e integramos soluciones de IA personalizadas para
-                        maximizar el retorno de tu inversión.</p>
+                    <p class="text-gray-600 text-center">Te asesoramos e integramos soluciones de IA personalizadas para maximizar el retorno de tu inversión.</p>
                 </div>
             </div>
         </div>
@@ -224,22 +164,16 @@
 
     <section id="beneficios" class="py-16 px-6 md:px-12 bg-gray-50">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Beneficios de la Automatización con
-                IA</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Beneficios de la Automatización con IA</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div class="space-y-6">
                     <div class="flex items-start">
                         <div class="flex-shrink-0 text-indigo-600 mt-1 mr-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Aumento de la Eficiencia</h3>
-                            <p class="text-gray-600">Automatiza tareas repetitivas
-                                y libera a tu equipo para actividades de mayor valor.</p>
+                            <p class="text-gray-600">Automatiza tareas repetitivas y libera a tu equipo para actividades de mayor valor.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
