@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,29 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Gris claro */
+            background-color: #f8fafc;
+            /* Gris claro */
         }
+
         /* Estilos personalizados para el gradiente del botón */
         .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Índigo a Púrpura */
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+            /* Índigo a Púrpura */
             transition: all 0.3s ease;
         }
+
         .btn-gradient:hover {
-            background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Índigo más oscuro a Púrpura más oscuro */
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed);
+            /* Índigo más oscuro a Púrpura más oscuro */
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
         }
+
         .section-heading {
             position: relative;
             display: inline-block;
         }
+
         .section-heading::after {
             content: '';
             position: absolute;
@@ -33,23 +41,33 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background-color: #6366f1; /* Índigo */
+            background-color: #6366f1;
+            /* Índigo */
             border-radius: 9999px;
         }
+
         /* Estilos para el modal */
         .modal {
-            display: none; /* Oculto por defecto */
-            position: fixed; /* Posición fija en la pantalla */
-            z-index: 1000; /* Por encima de todo */
+            display: none;
+            /* Oculto por defecto */
+            position: fixed;
+            /* Posición fija en la pantalla */
+            z-index: 1000;
+            /* Por encima de todo */
             left: 0;
             top: 0;
-            width: 100%; /* Ancho completo */
-            height: 100%; /* Alto completo */
-            overflow: auto; /* Habilitar scroll si es necesario */
-            background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+            width: 100%;
+            /* Ancho completo */
+            height: 100%;
+            /* Alto completo */
+            overflow: auto;
+            /* Habilitar scroll si es necesario */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Fondo semi-transparente */
             justify-content: center;
             align-items: center;
         }
+
         .modal-content {
             background-color: #fefefe;
             margin: auto;
@@ -57,9 +75,10 @@
             border-radius: 12px;
             width: 90%;
             max-width: 600px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             position: relative;
         }
+
         .close-button {
             color: #aaa;
             float: right;
@@ -70,6 +89,7 @@
             right: 20px;
             cursor: pointer;
         }
+
         .close-button:hover,
         .close-button:focus {
             color: #000;
@@ -78,35 +98,49 @@
         }
     </style>
 </head>
+
 <body class="text-gray-800">
 
     <header class="bg-white shadow-sm py-4 px-6 md:px-12 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-indigo-600 rounded-md p-2 hover:bg-indigo-50 transition-colors">
-                AutomatizIA
+                Automatizia
             </a>
             <nav class="hidden md:flex space-x-6">
-                <a href="#servicios" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Servicios</a>
-                <a href="#beneficios" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Beneficios</a>
-                <a href="#como-funciona" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Cómo Funciona</a>
-                <a href="#testimonios" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Testimonios</a>
-                <a href="#contacto" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Contacto</a>
+                <a href="#servicios"
+                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Servicios</a>
+                <a href="#beneficios"
+                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Beneficios</a>
+                <a href="#como-funciona"
+                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Cómo
+                    Funciona</a>
+                <a href="#testimonios"
+                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Testimonios</a>
+                <a href="#contacto"
+                    class="text-gray-600 hover:text-indigo-600 font-medium transition-colors p-2 rounded-md hover:bg-gray-50">Contacto</a>
             </nav>
             <button class="md:hidden text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 px-6 md:px-12 text-center rounded-b-lg shadow-lg">
+    <section
+        class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 px-6 md:px-12 text-center rounded-b-lg shadow-lg">
         <div class="container mx-auto max-w-4xl">
             <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                Transforma tu Negocio con Automatización Inteligente
+                Transforma tu Negocio con AutomatizIA Inteligente
             </h1>
             <p class="text-lg md:text-xl mb-10 opacity-90 animate-fade-in">
-                Libera el potencial de tu empresa. Automatizamos tus procesos clave con IA para que te enfoques en lo que realmente importa.
+                Libera el potencial de tu empresa. Automatizamos tus procesos clave con IA para que te enfoques en lo
+                que realmente importa.
             </p>
-            <a href="#contacto" class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <a href="#contacto"
+                class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 ¡Solicita una Consulta Gratuita!
             </a>
         </div>
@@ -114,49 +148,90 @@
 
     <section id="servicios" class="py-16 px-6 md:px-12 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Nuestros Servicios de Automatización</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Nuestros Servicios de
+                Automatización</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Automatización de Procesos Robóticos (RPA)</h3>
-                    <p class="text-gray-600 text-center">Implementamos bots de software para manejar tareas repetitivas y basadas en reglas, mejorando la eficiencia operativa.</p>
+                    <p class="text-gray-600 text-center">Implementamos bots de software para manejar tareas repetitivas y
+                        basadas en reglas, mejorando la eficiencia operativa.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h10M7 16h10M12 20h9a2 2 0 002-2V5a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2h9z"></path></svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 8h10M7 12h10M7 16h10M12 20h9a2 2 0 002-2V5a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2h9z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Asistentes Virtuales y Chatbots</h3>
-                    <p class="text-gray-600 text-center">Desarrollamos asistentes de IA para mejorar la atención al cliente, soporte y gestión de consultas 24/7.</p>
+                    <p class="text-gray-600 text-center">Desarrollamos asistentes de IA para mejorar la atención al
+                        cliente, soporte y gestión de consultas 24/7.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Análisis de Datos y Reportes Inteligentes</h3>
-                    <p class="text-gray-600 text-center">Transformamos datos brutos en información valiosa con IA, automatizando la generación de reportes y la toma de decisiones.</p>
+                    <p class="text-gray-600 text-center">Transformamos datos brutos en información valiosa con IA,
+                        automatizando la generación de reportes y la toma de decisiones.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V3a1 1 0 00-1-1H4a1 1 0 00-1 1v18a1 1 0 001 1h16a1 1 0 001-1V9a1 1 0 00-1-1h-4z"></path></svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V3a1 1 0 00-1-1H4a1 1 0 00-1 1v18a1 1 0 001 1h16a1 1 0 001-1V9a1 1 0 00-1-1h-4z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Gestión Documental Inteligente</h3>
-                    <p class="text-gray-600 text-center">Automatizamos la clasificación, extracción y procesamiento de información de documentos con IA.</p>
+                    <p class="text-gray-600 text-center">Automatizamos la clasificación, extracción y procesamiento de
+                        información de documentos con IA.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Automatización de Marketing y Ventas</h3>
-                    <p class="text-gray-600 text-center">Optimiza tus campañas, personaliza interacciones y califica leads automáticamente con soluciones de IA.</p>
+                    <p class="text-gray-600 text-center">Optimiza tus campañas, personaliza interacciones y califica
+                        leads automáticamente con soluciones de IA.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                     <div class="text-indigo-600 mb-4">
-                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-3">Integración y Consultoría de IA</h3>
-                    <p class="text-gray-600 text-center">Te asesoramos e integramos soluciones de IA personalizadas para maximizar el retorno de tu inversión.</p>
+                    <p class="text-gray-600 text-center">Te asesoramos e integramos soluciones de IA personalizadas para
+                        maximizar el retorno de tu inversión.</p>
                 </div>
             </div>
         </div>
@@ -164,48 +239,74 @@
 
     <section id="beneficios" class="py-16 px-6 md:px-12 bg-gray-50">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Beneficios de la Automatización con IA</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Beneficios de la Automatización con
+                IA</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div class="space-y-6">
                     <div class="flex items-start">
                         <div class="flex-shrink-0 text-indigo-600 mt-1 mr-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Aumento de la Eficiencia</h3>
-                            <p class="text-gray-600">Automatiza tareas repetitivas y libera a tu equipo para actividades de mayor valor.</p>
+                            <p class="text-gray-600">Automatiza tareas repetitivas y libera a tu equipo para actividades
+                                de mayor valor.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 text-indigo-600 mt-1 mr-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Reducción de Costos</h3>
-                            <p class="text-gray-600">Minimiza errores manuales y optimiza el uso de recursos, generando ahorros significativos.</p>
+                            <p class="text-gray-600">Minimiza errores manuales y optimiza el uso de recursos, generando
+                                ahorros significativos.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 text-indigo-600 mt-1 mr-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Mejora la Precisión</h3>
-                            <p class="text-gray-600">La IA reduce drásticamente los errores humanos, garantizando resultados más precisos y consistentes.</p>
+                            <p class="text-gray-600">La IA reduce drásticamente los errores humanos, garantizando
+                                resultados más precisos y consistentes.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 text-indigo-600 mt-1 mr-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Escalabilidad y Crecimiento</h3>
-                            <p class="text-gray-600">Prepara tu negocio para crecer sin limitaciones, manejando mayores volúmenes de trabajo sin esfuerzo.</p>
+                            <p class="text-gray-600">Prepara tu negocio para crecer sin limitaciones, manejando mayores
+                                volúmenes de trabajo sin esfuerzo.</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center">
-                    <img src="assets/beneficios.jpeg" alt="Imagen de Beneficios de IA" class="rounded-xl shadow-lg max-w-full h-auto">
+                <div class="flex justify-center relative">
+                    <div id="benefitsImageContainer" class="relative max-w-full h-auto flex flex-col items-center justify-center">
+                        <img id="generatedBenefitsImage" src="" alt="Imagen generada por IA para beneficios" class="rounded-xl shadow-lg max-w-full h-auto" style="display: none;">
+                        <p id="benefitsImageLoading" class="absolute inset-0 flex items-center justify-center bg-gray-200 bg-opacity-75 rounded-xl text-indigo-600 font-semibold hidden">Generando imagen...</p>
+                        <p id="benefitsImageError" class="absolute inset-0 flex items-center justify-center bg-red-100 bg-opacity-75 rounded-xl text-red-600 font-semibold hidden text-center p-4">Error al generar imagen.</p>
+                    </div>
+                    <img id="fallbackBenefitsImage" src="assets/beneficios.jpg" alt="Imagen de Beneficios de IA" class="rounded-xl shadow-lg max-w-full h-auto">
                 </div>
             </div>
         </div>
@@ -213,27 +314,36 @@
 
     <section id="como-funciona" class="py-16 px-6 md:px-12 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Nuestro Proceso de Automatización</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Nuestro Proceso de
+                Automatización</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
+                <div
+                    class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
                     <div class="text-indigo-600 text-5xl font-bold mb-4">1</div>
                     <h3 class="text-xl font-semibold mb-2">Análisis y Consulta</h3>
-                    <p class="text-gray-600">Entendemos tus necesidades y procesos actuales para identificar oportunidades de automatización.</p>
+                    <p class="text-gray-600">Entendemos tus necesidades y procesos actuales para identificar
+                        oportunidades de automatización.</p>
                 </div>
-                <div class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
+                <div
+                    class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
                     <div class="text-indigo-600 text-5xl font-bold mb-4">2</div>
                     <h3 class="text-xl font-semibold mb-2">Diseño de Solución</h3>
-                    <p class="text-gray-600">Diseñamos una solución de IA personalizada que se alinee con tus objetivos empresariales.</p>
+                    <p class="text-gray-600">Diseñamos una solución de IA personalizada que se alinee con tus objetivos
+                        empresariales.</p>
                 </div>
-                <div class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
+                <div
+                    class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
                     <div class="text-indigo-600 text-5xl font-bold mb-4">3</div>
                     <h3 class="text-xl font-semibold mb-2">Implementación y Pruebas</h3>
-                    <p class="text-gray-600">Desarrollamos e implementamos la solución, realizando pruebas exhaustivas para asegurar su eficacia.</p>
+                    <p class="text-gray-600">Desarrollamos e implementamos la solución, realizando pruebas exhaustivas
+                        para asegurar su eficacia.</p>
                 </div>
-                <div class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
+                <div
+                    class="p-6 rounded-xl shadow-md border border-gray-200 bg-gray-50">
                     <div class="text-indigo-600 text-5xl font-bold mb-4">4</div>
                     <h3 class="text-xl font-semibold mb-2">Soporte y Optimización</h3>
-                    <p class="text-gray-600">Ofrecemos soporte continuo y optimizamos la solución para garantizar su rendimiento a largo plazo.</p>
+                    <p class="text-gray-600">Ofrecemos soporte continuo y optimizamos la solución para garantizar su
+                        rendimiento a largo plazo.</p>
                 </div>
             </div>
         </div>
@@ -244,9 +354,13 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-heading">Lo que Dicen Nuestros Clientes</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
-                    <p class="text-gray-700 italic mb-6">"La automatización de AutomatizIA ha transformado nuestra gestión de documentos. Ahorramos horas de trabajo cada semana y la precisión es impecable."</p>
+                    <p class="text-gray-700 italic mb-6">"La automatización de Automatizia ha transformado nuestra
+                        gestión de documentos. Ahorramos horas de trabajo cada semana y la precisión es impecable."</p>
                     <div class="flex items-center">
-                        <img src="https://picsum.photos/500/350" alt="Imagen de Beneficios de IA" class="rounded-xl shadow-lg max-w-full h-auto" alt="[Image of John Doe]" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img id="generatedJuanPerezImage" src="" alt="Imagen generada por IA para Juan Pérez"
+                            class="w-12 h-12 rounded-full mr-4 object-cover" style="display: none;">
+                        <img id="fallbackJuanPerezImage" src="assets/juan-perez.jpg" alt="Juan Pérez"
+                            class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <p class="font-semibold text-gray-800">Juan Pérez</p>
                             <p class="text-sm text-gray-500">Director de Operaciones, Empresa X</p>
@@ -254,9 +368,13 @@
                     </div>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
-                    <p class="text-gray-700 italic mb-6">"Gracias a su chatbot, nuestra atención al cliente ha mejorado drásticamente. Los clientes obtienen respuestas instantáneas, incluso fuera de horario."</p>
+                    <p class="text-gray-700 italic mb-6">"Gracias a su chatbot, nuestra atención al cliente ha mejorado
+                        drásticamente. Los clientes obtienen respuestas instantáneas, incluso fuera de horario."</p>
                     <div class="flex items-center">
-                        <img src="https://placehold.co/60x60/cbd5e1/475569?text=AM" alt="[Image of Ana María]" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img id="generatedAnaGarciaImage" src="" alt="Imagen generada por IA para Ana García"
+                            class="w-12 h-12 rounded-full mr-4 object-cover" style="display: none;">
+                        <img id="fallbackAnaGarciaImage" src="assets/ana-garcia.png" alt="Ana García"
+                            class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <p class="font-semibold text-gray-800">Ana García</p>
                             <p class="text-sm text-gray-500">Gerente de Soporte, Tienda Online Y</p>
@@ -270,33 +388,49 @@
     <section id="contacto" class="py-16 px-6 md:px-12 bg-indigo-600 text-white rounded-t-lg shadow-lg">
         <div class="container mx-auto max-w-2xl text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">¡Impulsa tu Negocio Hoy!</h2>
-            <p class="text-lg mb-8 opacity-90">¿Listo para automatizar tus procesos y alcanzar nuevos niveles de eficiencia? Contáctanos para una consulta gratuita.</p>
-            <form class="bg-white p-8 rounded-xl shadow-lg text-gray-800 mb-12">
+            <p class="text-lg mb-8 opacity-90">¿Listo para automatizar tus procesos y alcanzar nuevos niveles de
+                eficiencia? Contáctanos para una consulta gratuita.</p>
+            <form action="https://formspree.io/f/xkgrlndq" method="POST"
+                class="bg-white p-8 rounded-xl shadow-lg text-gray-800 mb-12">
                 <div class="mb-6">
-                    <label for="nombre" class="block text-left text-gray-700 text-sm font-bold mb-2">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Tu nombre" required>
+                    <label for="nombre" class="block text-left text-gray-700 text-sm font-bold mb-2">Nombre
+                        Completo:</label>
+                    <input type="text" id="nombre" name="nombre"
+                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Tu nombre" required>
                 </div>
                 <div class="mb-6">
-                    <label for="email" class="block text-left text-gray-700 text-sm font-bold mb-2">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="tu.email@ejemplo.com" required>
+                    <label for="email" class="block text-left text-gray-700 text-sm font-bold mb-2">Correo
+                        Electrónico:</label>
+                    <input type="email" id="email" name="email"
+                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="tu.email@ejemplo.com" required>
                 </div>
                 <div class="mb-6">
                     <label for="mensaje" class="block text-left text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Cuéntanos sobre tus necesidades de automatización..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5"
+                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Cuéntanos sobre tus necesidades de automatización..." required></textarea>
                 </div>
-                <button type="submit" class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <button type="submit"
+                    class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     Enviar Mensaje
                 </button>
             </form>
 
             <div class="bg-white p-8 rounded-xl shadow-lg text-gray-800">
                 <h3 class="text-2xl font-bold mb-6 text-indigo-600">Generador de Ideas de Automatización ✨</h3>
-                <p class="text-gray-700 mb-6">Describe brevemente tu negocio o un proceso que te gustaría mejorar, y nuestra IA te sugerirá ideas de automatización.</p>
+                <p class="text-gray-700 mb-6">Describe brevemente tu negocio o un proceso que te gustaría mejorar, y
+                    nuestra IA te sugerirá ideas de automatización.</p>
                 <div class="mb-6">
-                    <label for="businessDescription" class="block text-left text-gray-700 text-sm font-bold mb-2">Describe tu negocio o proceso:</label>
-                    <textarea id="businessDescription" rows="6" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Ej: Soy dueño de una pequeña tienda de ropa online y quiero automatizar el servicio al cliente y la gestión de inventario."></textarea>
+                    <label for="businessDescription" class="block text-left text-gray-700 text-sm font-bold mb-2">Describe
+                        tu negocio o proceso:</label>
+                    <textarea id="businessDescription" rows="6"
+                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="Ej: Soy dueño de una pequeña tienda de ropa online y quiero automatizar el servicio al cliente y la gestión de inventario."></textarea>
                 </div>
-                <button id="generateIdeasBtn" class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <button id="generateIdeasBtn"
+                    class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     Generar Ideas de Automatización ✨
                 </button>
                 <div id="loadingIndicator" class="mt-6 text-indigo-600 font-semibold hidden">
@@ -310,16 +444,19 @@
 
     <footer class="bg-gray-800 text-white py-10 px-6 md:px-12 text-center rounded-t-lg">
         <div class="container mx-auto">
-            <p class="mb-4">&copy; 2025 AutomatizIA. Todos los derechos reservados.</p>
+            <p class="mb-4">&copy; 2025 Automatizia. Todos los derechos reservados.</p>
             <div class="flex justify-center space-x-6">
                 <a href="#" class="text-gray-400 hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z"
+                            clip-rule="evenodd" />
                     </svg>
                 </a>
                 <a href="#" class="text-gray-400 hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.277 1.277a.75.75 0 01.446 0l.974.238c.677.165 1.157.712 1.267 1.395l.238.974a.75.75 0 010 .446l-.238.974c-.11.683-.59 1.23-1.267 1.395l-.974.238a.75.75 0 01-.446 0l-.974-.238c-.677-.165-1.157-.712-1.267-1.395l-.238-.974a.75.75 0 010-.446l.238-.974c.11-.683.59-1.23 1.267-1.395l.974-.238zM2.871 4.307a.75.75 0 01.446 0l2.675.653c.677.165 1.157.712 1.267 1.395l.653 2.675a.75.75 0 010 .446l-.653 2.675c-.11.683-.59 1.23-1.267 1.395l-2.675.653a.75.75 0 01-.446 0l-2.675-.653c-.677-.165-1.157-.712-1.267-1.395l-.653-2.675a.75.75 0 010-.446l.653-2.675c.11-.683.59-1.23 1.267-1.395l2.675-.653zM18.871 4.307a.75.75 0 01.446 0l2.675.653c.677.165 1.157.712 1.267 1.395l.653 2.675a.75.75 0 010 .446l-.653 2.675c-.11.683-.59 1.23-1.267 1.395l-2.675.653a.75.75 0 01-.446 0l-2.675-.653c-.677-.165-1.157-.712-1.267-1.395l-.653-2.675a.75.75 0 010-.446l.653-2.675c.11-.683.59-1.23 1.267-1.395l2.675-.653zM12.277 17.277a.75.75 0 01.446 0l.974.238c.677.165 1.157.712 1.267 1.395l.238.974a.75.75 0 010 .446l-.238.974c-.11.683-.59 1.23-1.267 1.395l-.974.238a.75.75 0 01-.446 0l-.974-.238c-.677-.165-1.157-.712-1.267-1.395l-.238-.974a.75.75 0 010-.446l.238-.974c.11-.683.59-1.23 1.267-1.395l.974-.238z" />
+                        <path fill-rule="evenodd"
+                            d="M12.277 1.277a.75.75 0 01.446 0l.974.238c.677.165 1.157.712 1.267 1.395l.238.974a.75.75 0 010 .446l-.238.974c-.11.683-.59 1.23-1.267 1.395l-.974.238a.75.75 0 01-.446 0l-.974-.238c-.677-.165-1.157-.712-1.267-1.395l-.238-.974a.75.75 0 010-.446l.238-.974c.11-.683.59-1.23 1.267-1.395l.974-.238zM2.871 4.307a.75.75 0 01.446 0l2.675.653c.677.165 1.157.712 1.267 1.395l.653 2.675a.75.75 0 010 .446l-.653 2.675c-.11.683-.59 1.23-1.267 1.395l-2.675.653a.75.75 0 01-.446 0l-2.675-.653c-.677-.165-1.157-.712-1.267-1.395l-.653-2.675a.75.75 0 010-.446l.653-2.675c.11-.683.59-1.23 1.267-1.395l2.675-.653zM18.871 4.307a.75.75 0 01.446 0l2.675.653c.677.165 1.157.712 1.267 1.395l.653 2.675a.75.75 0 010 .446l-.653 2.675c-.11.683-.59 1.23-1.267 1.395l-2.675.653a.75.75 0 01-.446 0l-2.675-.653c-.677-.165-1.157-.712-1.267-1.395l-.653-2.675a.75.75 0 010-.446l.653-2.675c.11-.683.59-1.23 1.267-1.395l2.675-.653zM12.277 17.277a.75.75 0 01.446 0l.974.238c.677.165 1.157.712 1.267 1.395l.238.974a.75.75 0 010 .446l-.238.974c-.11.683-.59 1.23-1.267 1.395l-.974.238a.75.75 0 01-.446 0l-.974-.238c-.677-.165-1.157-.712-1.267-1.395l-.238-.974a.75.75 0 010-.446l.238-.974c.11-.683.59-1.23 1.267-1.395l.974-.238z" />
                     </svg>
                 </a>
             </div>
@@ -365,7 +502,7 @@
                 });
             });
 
-            // Lógica para el Generador de Ideas de Automatización con IA
+            // Lógica para el Generador de Ideas de Automatización con IA (interacción con usuario)
             const generateIdeasBtn = document.getElementById('generateIdeasBtn');
             const businessDescriptionInput = document.getElementById('businessDescription');
             const loadingIndicator = document.getElementById('loadingIndicator');
@@ -375,6 +512,19 @@
             const modalMessage = document.getElementById('modalMessage');
             const closeButton = document.querySelector('.close-button');
 
+            // NUEVOS ELEMENTOS para la generación automática de imágenes
+            const generatedBenefitsImage = document.getElementById('generatedBenefitsImage');
+            const fallbackBenefitsImage = document.getElementById('fallbackBenefitsImage');
+            const benefitsImageLoading = document.getElementById('benefitsImageLoading');
+            const benefitsImageError = document.getElementById('benefitsImageError');
+
+            const generatedJuanPerezImage = document.getElementById('generatedJuanPerezImage');
+            const fallbackJuanPerezImage = document.getElementById('fallbackJuanPerezImage');
+
+            const generatedAnaGarciaImage = document.getElementById('generatedAnaGarciaImage');
+            const fallbackAnaGarciaImage = document.getElementById('fallbackAnaGarciaImage');
+
+
             // Función para mostrar el modal
             function showModal(title, message) {
                 modalTitle.textContent = title;
@@ -383,17 +533,161 @@
             }
 
             // Función para cerrar el modal
-            closeButton.onclick = function() {
+            closeButton.onclick = function () {
                 messageModal.style.display = 'none';
             }
 
             // Cerrar modal al hacer clic fuera del contenido
-            window.onclick = function(event) {
+            window.onclick = function (event) {
                 if (event.target == messageModal) {
                     messageModal.style.display = 'none';
                 }
             }
 
+            // Función para generar la imagen para la sección de Beneficios
+            async function generateBenefitsImage() {
+                benefitsImageLoading.classList.remove('hidden'); // Mostrar indicador de carga
+                benefitsImageError.classList.add('hidden'); // Ocultar mensaje de error
+                generatedBenefitsImage.style.display = 'none'; // Ocultar imagen generada
+                fallbackBenefitsImage.style.display = 'none'; // Ocultar imagen de respaldo inicialmente
+
+                try {
+                    const imagePrompt = "Imagen abstracta relacionada con la automatización con IA, estilo moderno, minimalista, colores vibrantes, eficiencia, tecnología.";
+                    const imagePayload = {
+                        instances: [{ prompt: imagePrompt }], // Correct payload for imagen-3.0-generate-002
+                        parameters: { "sampleCount": 1 }
+                    };
+
+                    // Clave API vacía para evitar errores de facturación si no está configurada
+                    const apiKey = "AIzaSyCj1tQVwbbraR8kqAfxs47l0SUtxW9dWVM";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(imagePayload)
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`Error de la API de Imagen: ${response.status} - ${errorData.error.message || 'Error desconocido'}`);
+                    }
+
+                    const result = await response.json();
+                    console.log('API Response for Benefits Image:', result); // Log the full response
+
+                    if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                        const imageUrl = `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
+                        generatedBenefitsImage.src = imageUrl;
+                        generatedBenefitsImage.style.display = 'block'; // Mostrar la imagen generada
+                    } else {
+                        benefitsImageError.textContent = 'No se pudo generar la imagen. Mostrando imagen predefinida.';
+                        benefitsImageError.classList.remove('hidden');
+                        fallbackBenefitsImage.style.display = 'block'; // Mostrar la imagen de respaldo
+                        console.error('Estructura de respuesta inesperada para la imagen de beneficios:', result);
+                    }
+                } catch (error) {
+                    benefitsImageError.textContent = `Error al generar la imagen: ${error.message}. Mostrando imagen predefinida.`;
+                    benefitsImageError.classList.remove('hidden');
+                    fallbackBenefitsImage.style.display = 'block'; // Mostrar la imagen de respaldo
+                    console.error('Error al llamar a la API de generación de imágenes de beneficios:', error);
+                } finally {
+                    benefitsImageLoading.classList.add('hidden'); // Ocultar indicador de carga
+                }
+            }
+
+            // Función para generar la imagen para Juan Pérez
+            async function generateJuanPerezImage() {
+                generatedJuanPerezImage.style.display = 'none'; // Ocultar imagen generada
+                fallbackJuanPerezImage.style.display = 'block'; // Asegurar que la imagen de respaldo esté visible inicialmente
+
+                try {
+                    const imagePrompt = "Retrato profesional de un hombre de negocios sonriente, de unos 40 años, con un fondo abstracto y moderno que sugiera tecnología o eficiencia.";
+                    const imagePayload = {
+                        instances: [{ prompt: imagePrompt }], // Correct payload for imagen-3.0-generate-002
+                        parameters: { "sampleCount": 1 }
+                    };
+
+                    // Clave API vacía para evitar errores de facturación si no está configurada
+                    const apiKey = "AIzaSyCj1tQVwbbraR8kqAfxs47l0SUtxW9dWVM";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(imagePayload)
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`Error de la API de Imagen para Juan Pérez: ${response.status} - ${errorData.error.message || 'Error desconocido'}`);
+                    }
+
+                    const result = await response.json();
+                    console.log('API Response for Juan Perez Image:', result); // Log the full response
+
+                    if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                        const imageUrl = `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
+                        generatedJuanPerezImage.src = imageUrl;
+                        generatedJuanPerezImage.style.display = 'block'; // Mostrar la imagen generada
+                        fallbackJuanPerezImage.style.display = 'none'; // Ocultar la imagen de respaldo
+                    } else {
+                        console.error('Estructura de respuesta inesperada para la imagen de Juan Pérez:', result);
+                        // La imagen de respaldo permanece visible
+                    }
+                } catch (error) {
+                    console.error(`Error al generar la imagen de Juan Pérez: ${error.message}`);
+                    // La imagen de respaldo permanece visible
+                }
+            }
+
+            // Función para generar la imagen para Ana García
+            async function generateAnaGarciaImage() {
+                generatedAnaGarciaImage.style.display = 'none'; // Ocultar imagen generada
+                fallbackAnaGarciaImage.style.display = 'block'; // Asegurar que la imagen de respaldo esté visible inicialmente
+
+                try {
+                    const imagePrompt = "Retrato profesional de una mujer de negocios sonriente, de unos 30 años, con un fondo abstracto y moderno que sugiera comunicación o innovación.";
+                    const imagePayload = {
+                        instances: [{ prompt: imagePrompt }], // Correct payload for imagen-3.0-generate-002
+                        parameters: { "sampleCount": 1 }
+                    };
+
+                    // Clave API vacía para evitar errores de facturación si no está configurada
+                    const apiKey = "AIzaSyCj1tQVwbbraR8kqAfxs47l0SUtxW9dWVM";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(imagePayload)
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`Error de la API de Imagen para Ana García: ${response.status} - ${errorData.error.message || 'Error desconocido'}`);
+                    }
+
+                    const result = await response.json();
+                    console.log('API Response for Ana Garcia Image:', result); // Log the full response
+
+                    if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                        const imageUrl = `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
+                        generatedAnaGarciaImage.src = imageUrl;
+                        generatedAnaGarciaImage.style.display = 'block'; // Mostrar la imagen generada
+                        fallbackAnaGarciaImage.style.display = 'none'; // Ocultar la imagen de respaldo
+                    } else {
+                        console.error('Estructura de respuesta inesperada para la imagen de Ana García:', result);
+                        // La imagen de respaldo permanece visible
+                    }
+                } catch (error) {
+                    console.error(`Error al generar la imagen de Ana García: ${error.message}`);
+                    // La imagen de respaldo permanece visible
+                }
+            }
+
+
+            // Lógica para el Generador de Ideas de Automatización con IA (interacción con usuario)
             generateIdeasBtn.addEventListener('click', async () => {
                 const prompt = businessDescriptionInput.value.trim();
 
@@ -417,7 +711,8 @@
                     });
 
                     const payload = { contents: chatHistory };
-                    const apiKey = "AIzaSyD7tw4ke1OWcqPl0Gl252ptAyKbVTZmuTw"; // La clave API se proporciona en tiempo de ejecución por Canvas
+                    // Clave API vacía para evitar errores de facturación si no está configurada
+                    const apiKey = "AIzaSyCj1tQVwbbraR8kqAfxs47l0SUtxW9dWVM"; 
                     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
                     const response = await fetch(apiUrl, {
@@ -449,7 +744,15 @@
                     loadingIndicator.classList.add('hidden'); // Ocultar indicador de carga
                 }
             });
+
+            // Ejecutar la generación automática de imágenes al cargar la página
+            window.onload = () => {
+                generateBenefitsImage();
+                generateJuanPerezImage();
+                generateAnaGarciaImage();
+            };
         });
     </script>
 </body>
+
 </html>
